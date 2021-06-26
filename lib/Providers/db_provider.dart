@@ -7,7 +7,7 @@ class DBProvider with ChangeNotifier {
   Future<List<ArticlesModel>> fetchArticle() async {
     try {
       List<ArticlesModel> articlesList = await DBHandler.instance.getArticles();
-      return articlesList;
+      return articlesList; 
     } on DioError catch (error) {
       print(error.message);
       return [];
